@@ -5,7 +5,7 @@ namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AutoRegisterServices(this IServiceCollection services)
+    public static IServiceCollection AddInjectableServices(this IServiceCollection services)
     {
         services.Scan(scan => scan
             .FromDependencyContext(DependencyContext.Default)
